@@ -1,5 +1,6 @@
 import asyncio
 import websockets
+import modules.msg_helper as msg
 import requests
 
 async def main():
@@ -9,7 +10,7 @@ async def main():
     async with websockets.connect('ws://sim.smogon.com:8000/showdown/websocket') as websocket:
         while True:
             message = await websocket.recv()
-            print(message)
+            await msg.receive(websocket, message)
 
 
 if __name__ == '__main__':
