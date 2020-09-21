@@ -7,7 +7,7 @@ class Team:
         self.active = 0
 
     def add(self, pkmlist):
-        rawpkms = pkmlist.split(',')
+        rawpkms = pkmlist
         for pkm in rawpkms:
             self.pkms.append(Pokemon(pkm.split('|')[0], pkm.split('|')[1]))
 

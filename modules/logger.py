@@ -12,4 +12,4 @@ def incoming(message):
 
 def log(message):
     display_date()
-    print(message)
+    print('[>> LOG] \t' + message)
